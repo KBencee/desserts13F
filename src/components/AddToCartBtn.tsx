@@ -1,6 +1,5 @@
 import { useState } from "react"
 
-
 const AddToCartBtn = () => {
   
   const [count, setCount] = useState(0)
@@ -9,10 +8,10 @@ const AddToCartBtn = () => {
     <>
     {
         count == 0 ?
-        <div onClick={()=>setCount(count + 1)}>
+        <div className="addBtn" onClick={()=>setCount(count + 1)}>
             🛒 Add to Cart 
         </div> :
-        <div>
+        <div className="addBtn active">
             <button onClick={()=>setCount(count - 1)}>-</button>
             {count}
             <button onClick={()=>setCount(count + 1)}>+</button>
